@@ -65,7 +65,7 @@ public class SoccerGame {
 	}
 
 	/**
-	 * returns time remaing
+	 * returns time remaining
 	 * @return timeReamining
 	 */
 	public Integer getTimeRemaining() {
@@ -73,13 +73,17 @@ public class SoccerGame {
 	}
 
 	/**
-	 * 
+	 * setting the remaining time
 	 * @param timeRemaining
 	 */
 	public void setTimeRemaining(Integer timeRemaining) {
 		this.timeRemaining = timeRemaining;
 	}
-
+	
+	/**
+	 * returns the number of goal scored by the striker
+	 * @return goal
+	 */
 	public Integer getGoal() {
 		return goal;
 	}
@@ -87,7 +91,11 @@ public class SoccerGame {
 	public void setGoal(Integer newGoal) {
 		goal = newGoal;
 	}
-
+	
+	/**
+	 * checking whether the game is paused
+	 * @return isPaused
+	 */
 	public Boolean isPaused() {
 		return isPaused;
 	}
@@ -95,7 +103,11 @@ public class SoccerGame {
 	public void setPaused(Boolean paused) {
 		isPaused = paused;
 	}
-
+	
+	/**
+	 * checking whether the game is over
+	 * @return isOver
+	 */
 	public Boolean isOver() {
 		return isOver;
 	}
@@ -119,7 +131,12 @@ public class SoccerGame {
 			goalkeeper.moveRandomly();
 		}
 	}
-
+	
+	/**
+	 * checking whether the goal is scored/ the ball is in Gate
+	 * @return true if the ball is in the Gate,
+	 *         false if the ball is not in the Gate
+	 */
 	public boolean isScored() {
 		return SoccerBall.getSoccerBall().inGate();
 	}
