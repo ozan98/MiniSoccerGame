@@ -10,6 +10,10 @@ public class GameListener implements KeyListener {
 
 	private final GamePanel gamePanel;
 
+	/**
+	 * Initializes GamePanel
+	 * @param panel
+	 */
 	public GameListener(GamePanel panel) {
 		gamePanel = panel;
 	}
@@ -19,6 +23,9 @@ public class GameListener implements KeyListener {
 
 	}
 
+	/**
+	 * initializes SoccerGame and allows movement of player
+	 */
 	@Override
 	public void keyPressed(KeyEvent e) {
 		SoccerGame soccerGame = gamePanel.getGame();

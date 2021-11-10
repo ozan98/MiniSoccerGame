@@ -10,11 +10,17 @@ public class MenubarListener implements ActionListener {
 
 	private final GamePanel gamePanel;
 
+	/**
+	 * initializes GamePanel
+	 * @param panel
+	 */
 	public MenubarListener(GamePanel panel) {
 		gamePanel = panel;
 	}
 
-
+	/**
+	 * Handles events based on the status of SoccerGame
+	 */
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		SoccerGame soccerGame = gamePanel.getGame();

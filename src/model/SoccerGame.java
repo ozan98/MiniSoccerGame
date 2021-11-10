@@ -17,6 +17,10 @@ public class SoccerGame {
 
 	private final PlayerCollection gamePlayers;
 
+
+	/**
+	 * initializes time, SoccerBall, PlayerFactory, and PlayerCollection
+	 */
 	public SoccerGame() {
 		timeRemaining = 60;
 		goal = 0;
@@ -30,6 +34,9 @@ public class SoccerGame {
 		startGame();
 	}
 
+	/**
+	 * starts the game with timer and timerTask
+	 */
 	private void startGame() {
 		Timer timer = new Timer();
 		TimerTask timerTask = new TimerTask() {
@@ -57,10 +64,18 @@ public class SoccerGame {
 		timer.schedule(timerTask, 1000, 1000);
 	}
 
+	/**
+	 * returns time remaing
+	 * @return timeReamining
+	 */
 	public Integer getTimeRemaining() {
 		return timeRemaining;
 	}
 
+	/**
+	 * 
+	 * @param timeRemaining
+	 */
 	public void setTimeRemaining(Integer timeRemaining) {
 		this.timeRemaining = timeRemaining;
 	}
